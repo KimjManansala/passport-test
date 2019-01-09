@@ -91,6 +91,7 @@ passport.use(new GitHubStrategy({
         callbackURL: "/auth/github/callback"
     },
     function (accessToken, refreshToken, profile, cb) {
+        console.log(accessToken)
         return cb(null, profile);
     }
 ));
